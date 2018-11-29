@@ -1,0 +1,23 @@
+<div class="jumbotron bg-info text-center">
+    <h1><font color="white">FirmAndando</font></h1>
+</div>
+
+<h2>Documentos</h2>
+<br />
+<%= form_with scope: :documents, url: documents_path, local: true do |form| %>
+  <p>
+    <%= form.label :Nombre %><br>
+    <%= form.nombre_field :nombre %>
+  </p>
+
+ 	<%= form.label :Archivo %><br>
+    <%= form.nombre_field :title %>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text, required :class=>'form-control'%>
+  </p>
+ 
+  <p>
+    <%= form.submit "Registrar",:class=>'btn btn-primary' %>
+  </p>
+<% end %>

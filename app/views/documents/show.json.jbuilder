@@ -1,0 +1,1 @@
+json.extract! @document, :id, :nombre, :ruta, :created_at, :updated_at

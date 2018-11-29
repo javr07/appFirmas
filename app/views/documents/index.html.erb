@@ -1,0 +1,23 @@
+<head>
+	<div class="jumbotron bg-info text-center">
+    <h1><font color="white">FirmAndando</font></h1>
+</div>
+</head>
+<body>
+	<center>
+		<h2>Documentos</h2>
+	</center>
+
+<br />
+	<div class="card-columns" id="cards">
+		<% @documents.each do |document| %>
+		<div class='card bg-light'>
+			<div class='card-body text-center'>
+				<h4 class='card-title'><%= document.nombre %></h4>
+				<p class='card-text'><%= document.created_at %></p>
+				<%= link_to 'Visualizar', document_path(document) %>
+			</div>
+		</div>
+  	<% end -%>
+	</div>
+</body>
