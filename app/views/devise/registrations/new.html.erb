@@ -1,4 +1,4 @@
-<center>
+<div class="border-form-div">
 <h2>Registrarme</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -10,13 +10,13 @@
   </div>
   <div class="field">
     <%= f.label :Nombre %><br />
-    <%= f.nombre_field :nombre, autocomplete: "nombre", :class=>'form-control' %>
+    <%= f.text_field :nombre, autocomplete: "nombre", :class=>'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :Contraseña %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> Caracteres mínimos)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password", :class=>'form-control' %>
   </div>
@@ -32,4 +32,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-</center>
+</div>
