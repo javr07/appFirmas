@@ -6643,3 +6643,2590 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:04:59 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 15099ms (Views: 15052.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:10:55 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:37
+  Rendered documents/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 130ms (Views: 125.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:13:31 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:37
+  Rendered documents/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:18:40 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1479ms (Views: 1476.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:20:29 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4045ms (Views: 4041.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:34:09 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.7ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 4852ms (Views: 4846.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:35:50 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.8ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:35:55 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 78ms (Views: 74.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:35:57 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:35:58 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:04 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 77ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:18 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:26 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:30 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:31 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:35 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:55 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:36:59 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:37:02 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:37:22 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:37:31 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:42:38 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4563ms (Views: 4559.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:43:56 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 4396ms (Views: 4392.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:53:10 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.6ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 4513ms (Views: 4502.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:53:34 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:53:35 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 74.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:54:57 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 4428ms (Views: 4424.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:55:15 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:55:16 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:39
+  Rendered documents/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 86ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:56:55 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:57:18 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:57:47 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-02 21:57:51 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 22:37:15 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:37:16 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 139ms (Views: 112.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:37:30 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jIfqysA/zD2DDrMj4amChFyIrNUwIBS0cnlA+wwlsTw1QHlCmlU5CQyh7n15ggR8rYgxZGxSXgq5GiwVzOxYAQ==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:53
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2018-12-03 04:37:30.392866"], ["updated_at", "2018-12-03 04:37:30.394152"], ["id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:53
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:53
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 219ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-12-02 22:37:30 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.3ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (32.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (24.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.7ms)
+Completed 200 OK in 1186ms (Views: 645.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 22:37:34 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 100ms (Views: 95.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 22:38:01 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 22:38:02 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 22:38:12 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (16.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (37.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.4ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.2ms)
+Completed 200 OK in 332ms (Views: 321.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-02 22:38:14 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (91.7ms)
+Completed 200 OK in 149ms (Views: 133.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/user/4/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-02 22:38:19 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (2.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (4.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (1.0ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (3.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (0.3ms)
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:10
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" ORDER BY documents.id desc[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:20
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (42.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_submit_buttons.html.haml (11.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (205.7ms)
+Completed 200 OK in 248ms (Views: 232.8ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/admin/user/4/edit" for 127.0.0.1 at 2018-12-02 22:38:26 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+hG+EvA5svzDga0s/FU0s6Sv0GQNrOfVGxw6jqE7vfH+jmjFWrmHouGzVsSD3AALjzrQjFc0FJnKJp0+mX1+g==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"3 de Diciembre de 2018 04:37", "confirmation_token"=>"Df_SmhEyBpWXdsbbb-nh", "confirmed_at"=>"2 de Diciembre de 2018 22:34", "confirmation_sent_at"=>"2 de Diciembre de 2018 22:30", "admin"=>"1", "nombre"=>"José Valdivia", "coordinador"=>"0", "document_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" WHERE 1=0[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:19
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "confirmed_at" = ?, "confirmation_sent_at" = ?, "admin" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["confirmed_at", nil], ["confirmation_sent_at", nil], ["admin", 1], ["updated_at", "2018-12-03 04:38:26.440253"], ["id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 21ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2018-12-02 22:38:26 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:38:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 117ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:38:39 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"el5iX9cR1nASj3kNBzQ1vMhrtEbiyCS8s1O21ajVVbr+Ko/Vy1dehbdhwGTA0buX4Dw6BHntSJxTYkCO0U5YAQ==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 153ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:38:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:38:54 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Egv1xu8hX0IibYEzi2xrSCQAHc7usKmw5hyiXjTettOWfxhM82fXt4eDOFpMieVjDFeTjHWVxZAGLVQFTUW7aA==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 151ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:38:54 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:39:39 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LUA1a3/kDXnDZuAhQfkoiDzjJZIjvdBU9M3NjkwJ80ypNNjhY6KFjGaIWUiGHKajFLSr0LiYvHQU/DvVNZL+9w==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 153ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:39:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:42:29 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 132ms (Views: 111.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:42:43 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+HJgwzAsF4/EnfbjoOfoPMI0WdfDhsuZurNe+azapBvlSQJEIY4q5r8zrJJZhGL219fJcQrdw6G2zsgnyhnKw==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `rememberable_options' for #<Class:0x00007fe160b91e48>):
+  
+activerecord (5.2.1.1) lib/active_record/dynamic_matchers.rb:22:in `method_missing'
+devise (4.5.0) lib/devise/strategies/rememberable.rb:56:in `remember_key'
+devise (4.5.0) lib/devise/strategies/rememberable.rb:60:in `remember_cookie'
+devise (4.5.0) lib/devise/strategies/rememberable.rb:15:in `valid?'
+warden (1.2.8) lib/warden/proxy.rb:367:in `block in _run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:365:in `each'
+warden (1.2.8) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.8) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.8) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.5.0) app/controllers/devise/sessions_controller.rb:19:in `create'
+actionpack (5.2.1.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:43:36 -0600
+  
+SyntaxError (/Users/javr/appFirmas/app/models/user.rb:6: syntax error, unexpected ':', expecting keyword_end
+...  :recoverable, :rememberable :validatable, :confirmable
+...                              ^
+/Users/javr/appFirmas/app/models/user.rb:6: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+...able :validatable, :confirmable
+...                               ^):
+  
+app/models/user.rb:6: syntax error, unexpected ':', expecting keyword_end
+app/models/user.rb:6: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+config/routes.rb:5:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:44:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 115ms (Views: 94.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:44:15 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6I5auCz1JoayZYYZWC/69lK/HC+CZcbFg7v+RTE/lcZs+rcyMLOucxeLP3CfynTdeuiSbRlAquVjiggeSKSYfQ==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 153ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:44:15 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:44:41 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XAmdLx8EAEuP58Nm9jhrr08t/De2fWEilNqcwW0N08HYfXClA0KIvioJeg8x3eWEZ3pydS1YDQJ062qaFJbeeg==", "user"=>{"email"=>"a@b.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 191ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2018-12-02 22:44:41 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (83.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.1ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (28.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (52.9ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (9.7ms)
+Completed 200 OK in 502ms (Views: 490.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user/4/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-02 22:44:49 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (2.0ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (4.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (2.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (0.3ms)
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:10
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" ORDER BY documents.id desc[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:20
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (23.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_submit_buttons.html.haml (11.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (173.0ms)
+Completed 200 OK in 210ms (Views: 199.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-02 22:45:00 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.0ms)
+Completed 200 OK in 100ms (Views: 92.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/document?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-02 22:45:40 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"document"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY documents.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.1ms)
+Completed 200 OK in 109ms (Views: 92.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-12-02 22:46:00 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fiRhHnJ8vUMCeRbaz5tdGvHVqO+rGv0HYM+C81OyjluoX+JGjKvHNXeW0XjTPD1M23Ux2BJ35wqFm7f9eUqrug=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 22:46:00 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 104ms (Views: 99.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 22:46:07 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:46:07 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:46:21 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2IBmHVM2GzcC5wGx40EmzEgZquZRo+NXW8t36W4AN/Q7LdRise8+2yPGT7/OvNiXvJdsrWA2dFOjiktZjiAz1Q==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 152ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:46:21 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2018-12-02 22:46:24 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 125ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2018-12-02 22:46:32 -0600
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uz3uc42l+ev8x3vqPAuz0+2/D3DXlcLvGIjxfv7lGRokYUX8iCELZsWuZALN07BRinec6CnMRYOz9Wx4j+SAoA==", "user"=>{"email"=>"ppjavr@hotmail.com"}, "commit"=>"Enviar instrucciones para reestablecer"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "e3e9c47d79dc5ba1e3a718b44f1e74340784c1adb465f78d6488d30e23e6e2f6"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:94
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "e3e9c47d79dc5ba1e3a718b44f1e74340784c1adb465f78d6488d30e23e6e2f6"], ["reset_password_sent_at", "2018-12-03 04:46:32.585189"], ["updated_at", "2018-12-03 04:46:32.585992"], ["id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:94
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:94
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (0.9ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 114.8ms
+Sent mail to ppjavr@hotmail.com (5293.4ms)
+Date: Sun, 02 Dec 2018 22:46:32 -0600
+From: transito.proyecto18@gmail.com
+Reply-To: transito.proyecto18@gmail.com
+To: ppjavr@hotmail.com
+Message-ID: <5c04b528b1086_dc33ff0ae58364c49786@MacBook-Pro-Jose.local.mail>
+Subject: =?UTF-8?Q?Instrucciones_de_cambio_de_contrase=C3=B1a?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Hola, ppjavr@hotmail.com!</p>=0D
+=0D
+<p>Has solicitado cambiar tu contrase=C3=B1a, por favor da clic en el sig=
+uiente enlace.</p>=0D
+=0D
+<p><a href=3D"http://localhost:3000/users/password/edit?reset_password_to=
+ken=3DVcGJwkakCmBG7xg57_Hy">Change my password</a></p>=0D
+=0D
+<p>Si t=C3=BA no lo has solicitado, por favor ignora este correo.</p>=0D
+<p>Tu contrase=C3=B1a nunca cambiar=C3=A1 si no ingresas al enlace anteri=
+or.</p>=0D
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 5787ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:46:38 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2018-12-02 22:46:56 -0600
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/passwords/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 122ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/password" for 127.0.0.1 at 2018-12-02 22:47:14 -0600
+Processing by Devise::PasswordsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i6+SA8N0WyGK9cxCTGM5e9B1usMSsqMNv77yv6OUgw9oAiB8Ia1+zavUgkxhnscgJPt8iCMnNAlH/84PQ7SHLg==", "user"=>{"reset_password_token"=>"[FILTERED]", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cambiar contraseña"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "e3e9c47d79dc5ba1e3a718b44f1e74340784c1adb465f78d6488d30e23e6e2f6"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:41
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_sent_at" = ?, "encrypted_password" = ?, "updated_at" = ?, "reset_password_token" = ? WHERE "users"."id" = ?[0m  [["reset_password_sent_at", nil], ["encrypted_password", "$2a$11$QD2AsBShDH43C.LwkgpR5OE1IhuUSd0BAMbiC97tDnfI15aytbHlG"], ["updated_at", "2018-12-03 04:47:14.205282"], ["reset_password_token", nil], ["id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:41
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/recoverable.rb:41
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 162ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:47:14 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:47:25 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nowz1EClgnLm978x6YFle4hi6656/OP8OWpXfB552T19IYGronynnsfW8T/EfJsgfOwt5UtpdPjBK2vM/lndHA==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 153ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:47:25 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:52:44 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 18034ms (Views: 17996.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:53:23 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmpdJCIoCZcnjoNtF1ii9/kzxS5B8OzPbVeN7RLm5//lx+9bwPEsewavzWM6pVysDb0DZXBle8uVFrFd8sbj3g==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 171ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:53:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:54:07 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:57:46 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ort "bootstrap"": expected "{", was ";"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1395790088668364629_70112566900040'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:58:06 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ort "bootstrap"": expected "{", was ";"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1395790088668364629_70112567656120'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:58:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "*= require toastr": expected "{", was ";"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:15
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1395790088668364629_70112562021500'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:58:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 5376ms (Views: 5374.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:59:28 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URz39MMZIFwAD1TBCv1mcbFuONXjnqw/uWnXx89pI2uysUWLIcAFsCEuGs8nAJgqReD+ntILOztBKOt3L0knSg==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 156ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 22:59:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 98ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:03:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 1408ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "*": expected selector, was "= require toastr"):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1395790088668364629_70112564752540'
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:03:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 259ms (Views: 258.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:03:33 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T0hTs0q2CGbDVAzxBYiNhNhcUcv4186Owk83EEn7/Oqs5eHMqG8tiuJ1Qv8odXPfLNKXgMlCWYo6Dgugqdv4yw==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 152ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:03:33 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-12-02 23:04:05 -0600
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 91ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/confirmation" for 127.0.0.1 at 2018-12-02 23:06:15 -0600
+Processing by Devise::ConfirmationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ProVjOSfIM5dX2zI4nOsxEfRwJTGuv+TsI0yoR7ug45+CItd6aNq5o5djHcnAUhEXxFFRJIBfcOJSOfYZzDMiQ==", "user"=>{"email"=>"ppjavr@hotmail.com"}, "commit"=>"Reenviar instrucciones"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/confirmable.rb:255
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/confirmable.rb:255
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 110.3ms
+Sent mail to ppjavr@hotmail.com (3064.5ms)
+Date: Sun, 02 Dec 2018 23:06:15 -0600
+From: transito.proyecto18@gmail.com
+Reply-To: transito.proyecto18@gmail.com
+To: ppjavr@hotmail.com
+Message-ID: <5c04b9c76be6d_10383fc4568e8ac842474@MacBook-Pro-Jose.local.mail>
+Subject: =?UTF-8?Q?Instrucciones_de_confirmaci=C3=B3n?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Bienvenido, ppjavr@hotmail.com!</p>=0D
+=0D
+<p>Estamos muy felices que quieras ser parte de nuestra p=C3=A1gina.</p>=0D=
+
+=0D
+<p>Solo falta confirmar tu cuenta, por favor da clic en el enlace siguien=
+te.</p>=0D
+<p><a href=3D"http://localhost:3000/users/confirmation?confirmation_token=
+=3DDf_SmhEyBpWXdsbbb-nh">Confirmar mi cuenta</a></p>=0D
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3371ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:06:18 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 127ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=Df_SmhEyBpWXdsbbb-nh" for 127.0.0.1 at 2018-12-02 23:06:37 -0600
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"Df_SmhEyBpWXdsbbb-nh"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "Df_SmhEyBpWXdsbbb-nh"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/confirmable.rb:97
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2018-12-03 05:06:37.027133"], ["updated_at", "2018-12-03 05:06:37.028576"], ["id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/confirmable.rb:97
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/confirmable.rb:97
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:06:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:07:18 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtLKaUeRWYLFZI47SGgK4YSoeM/I9SoHkWcdLJ6ESGvRf3gWpUh8buRFwDVllfS6cCa+hPlgvQNpJiGcfqRMSg==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Completed 401 Unauthorized in 150ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtLKaUeRWYLFZI47SGgK4YSoeM/I9SoHkWcdLJ6ESGvRf3gWpUh8buRFwDVllfS6cCa+hPlgvQNpJiGcfqRMSg==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 386ms (Views: 236.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:07:27 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ZCKl85snZyONC3rg0s+Ot9/7ndAEhuBUPdD0cS7LN0+PTjoLLW4cK8VY+WutsBhK/EoPHGHjIWotn9hJJso/A==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 195ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-12-02 23:07:27 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.1ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (29.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (23.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.6ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.5ms)
+Completed 200 OK in 1203ms (Views: 784.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:07:35 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 23:07:56 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (17.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (39.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.1ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (11.9ms)
+Completed 200 OK in 395ms (Views: 384.7ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-12-02 23:08:00 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BxHmGpXnc+C+Vuvew1fpn0w7gErfVyf0DaZyPXYB013iWXSHOXQ6Apr/wVFep3sWt9QJ1Z0ylL3HJIRWYdAy+Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:08:00 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/adin" for 127.0.0.1 at 2018-12-02 23:08:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/adin"):
+  
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 23:08:11 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:08:11 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:08:20 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S7X7Dn3M5EmtUJFYwu46dFyO1Mewy71lzvTGwz87G42l65PZ+gfWnATU/+18cBJDAyVpsZNVFGe9qYhzBqu+yQ==", "user"=>{"email"=>"ij@ij.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ij@ij.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S7X7Dn3M5EmtUJFYwu46dFyO1Mewy71lzvTGwz87G42l65PZ+gfWnATU/+18cBJDAyVpsZNVFGe9qYhzBqu+yQ==", "user"=>{"email"=>"ij@ij.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 233ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:27:24 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 185ms (Views: 177.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-02 23:38:01 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-02 23:38:01 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 119ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:38:07 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:33
+  Rendered documents/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:39:59 -0600
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-02 23:40:26 -0600
+  
+AbstractController::ActionNotFound (The action 'login' could not be found for DeviseController):
+  
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:00:32 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete );@output_buffer.safe_...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:34: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;			 @documents.each do |document| 
+         			                 ^~
+/Users/javr/appFirmas/app/views/documents/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/documents/index.html.erb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:34: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/documents/index.html.erb:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:03:22 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete ;@output_buffer.safe_a...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:36: syntax error, unexpected keyword_do_block, expecting keyword_end
+'.freeze;			 @documents.each do |document| 
+         			                 ^~
+/Users/javr/appFirmas/app/views/documents/index.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:36: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/documents/index.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:06:38 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) ;@output_buffer.safe_...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:06:54 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) ;@output_buffer.safe_...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:07:37 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) );@output_buffer.safe...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+...session_path, method :delete) );@output_buffer.safe_append='...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:08:08 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) );@output_buffer.safe...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+...session_path, method :delete) );@output_buffer.safe_append='...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:09:06 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) );@output_buffer.safe...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+...session_path, method :delete) );@output_buffer.safe_append='...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:09:35 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...roy_user_session_path, method :delete) );@output_buffer.safe...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+...session_path, method :delete) );@output_buffer.safe_append='...
+...                              ^):
+  
+app/views/documents/index.html.erb:33: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/documents/index.html.erb:33: syntax error, unexpected ')', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:13:02 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:13:20 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:38
+  Rendered documents/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 00:23:04 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-03 00:23:04 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 114ms (Views: 94.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-03 00:23:15 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sbD1oZcxT1A+YPLkOUNkIBmarlQXuzSiz8VftKLN4u5f7p12EPp9hZfknFGH3UwXRjETIjQlnaC8mBEEm11Hqg==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 188ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-12-03 00:23:15 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.1ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (14.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (32.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.7ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (5.4ms)
+Completed 200 OK in 321ms (Views: 306.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:23:19 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:41
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 73ms (Views: 68.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-12-03 00:23:43 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:24:22 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:41
+  Rendered documents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 76ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-12-03 00:24:27 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:24:33 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:41
+  Rendered documents/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 00:25:07 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.3ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (16.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (36.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.3ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (5.7ms)
+Completed 200 OK in 333ms (Views: 322.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:32:07 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:41
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 125ms (Views: 119.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:32:50 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:41
+  Rendered documents/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 86ms (Views: 81.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-12-03 00:32:53 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZQFLu7Ng8f1SC5294vMI95+aM6wiNJiLAUK9trjeyoTqWJV37ymTHJOQdXXYjsJk4LcnuNb5/VNYIYI6cwOcmg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:32:53 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<a href="#">Firmar documento</a>
+    21: 			</li>
+    22: 			<li>
+    23: 				<%= link_to(current_user.nombre, edit_user_registration_path) %>
+    24: 			</li>
+    25: 		</ul>
+    26: 	</nav>
+  
+app/views/documents/index.html.erb:23:in `_app_views_documents_index_html_erb__325095671637555450_70112544647500'
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 00:38:38 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-03 00:38:39 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 122ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-03 00:38:49 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVDELDayCfm6ZBUu+umkzij9koguhcg8sXrHstBxsgvY4YSQzi50TH/783yqVeXM7nM+PYkMMt5P6xj4vEk27Q==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 186ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-12-03 00:38:49 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (14.1ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (32.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (3.7ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (7.5ms)
+Completed 200 OK in 308ms (Views: 298.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:38:53 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:41:16 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:41:22 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 82ms (Views: 79.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 00:41:29 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (17.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (33.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (4.6ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.1ms)
+Completed 200 OK in 360ms (Views: 349.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:41:59 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 00:44:15 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (19.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (10.1ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (39.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (10.8ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (8.9ms)
+Completed 200 OK in 441ms (Views: 431.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:44:18 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 91ms (Views: 86.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/%3Ca" for 127.0.0.1 at 2018-12-03 00:44:48 -0600
+  
+ActionController::RoutingError (No route matches [DELETE] "/%3Ca"):
+  
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:45:29 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 91ms (Views: 85.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:47:20 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:48:01 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+...troy_user_session_path, method: :delete);@output_buffer.safe...
+...                        ^~~~~~~):
+  
+app/views/documents/index.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:48:20 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/index.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+...troy_user_session_path, method: :delete);@output_buffer.safe...
+...                        ^~~~~~~):
+  
+app/views/documents/index.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:48:37 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 153ms (Views: 149.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:51:06 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 75ms (Views: 69.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:51:23 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:51:44 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:51:54 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 132ms (Views: 127.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:52:12 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:52:23 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 89ms (Views: 85.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:52:35 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 101ms (Views: 96.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:54:19 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:54:32 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:56:27 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:56:46 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 82ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:57:00 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 89ms (Views: 85.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-12-03 00:57:14 -0600
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 00:57:17 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 98ms (Views: 92.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-03 01:09:18 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.3ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (21.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (34.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.0ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.3ms)
+Completed 200 OK in 478ms (Views: 459.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-03 01:09:24 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (69.4ms)
+Completed 200 OK in 112ms (Views: 98.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-03 01:09:47 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (2.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (3.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (1.0ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_datetime.html.haml (0.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (5.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_boolean.html.haml (0.4ms)
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:10
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" ORDER BY documents.id desc[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml:20
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_form_filtering_multiselect.html.haml (37.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/_submit_buttons.html.haml (10.1ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (209.7ms)
+Completed 200 OK in 257ms (Views: 241.6ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/admin/user/1/edit" for 127.0.0.1 at 2018-12-03 01:10:04 -0600
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKP274H/Qssug1+alYXAsoAyT8HFNbrPrqWSVmPKxOeyALrcjpo/d9ZhMS6c/2DbVTCjNviShfQuab8/g9Y33Q==", "user"=>{"email"=>"a@b.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "confirmation_token"=>"", "confirmed_at"=>"28 de Noviembre de 2018 21:04", "confirmation_sent_at"=>"", "admin"=>"0", "nombre"=>"", "coordinador"=>"1", "document_ids"=>["", ""]}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" WHERE 1=0[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:19
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "confirmation_token" = ?, "confirmed_at" = ?, "nombre" = ?, "coordinador" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmation_token", ""], ["confirmed_at", nil], ["nombre", ""], ["coordinador", 1], ["updated_at", "2018-12-03 07:10:04.783864"], ["id", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record/abstract_object.rb:23
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 23ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2018-12-03 01:10:04 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (78.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (7.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (37.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.0/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (8.4ms)
+Completed 200 OK in 466ms (Views: 453.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-12-03 01:10:36 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+EIUTzv76Z1lMf1uZ4ZrAnqbJrv//+V6XHRBG3RvcDeyGoI9yC/xWCmuvfI3plbLM4WlRLj9QbsH6SUi0DsvtQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:10:36 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<a href="#">Firmar documento</a>
+    21: 			</li>
+    22: 			<li>
+    23: 				<%= link_to(current_user.nombre, edit_user_registration_path) %>
+    24: 			</li>
+    25: 		</ul>
+    26: 	</nav>
+  
+app/views/documents/index.html.erb:23:in `_app_views_documents_index_html_erb__325095671637555450_70112561449020'
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:10:46 -0600
+  
+SyntaxError (/Users/javr/appFirmas/config/routes.rb:7: syntax error, unexpected '\n', expecting =>
+...ly:[:index, :show], :signatures
+...                               ^
+/Users/javr/appFirmas/config/routes.rb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+config/routes.rb:7: syntax error, unexpected '\n', expecting =>
+config/routes.rb:14: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:11:10 -0600
+  
+NoMethodError (undefined method `coordinador' for :user:Symbol):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:19:01 -0600
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  Rendered documents/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    20: 				<a href="#">Firmar documento</a>
+    21: 			</li>
+    22: 			<li>
+    23: 				<%= link_to(current_user.nombre, edit_user_registration_path) %>
+    24: 			</li>
+    25: 		</ul>
+    26: 	</nav>
+  
+app/views/documents/index.html.erb:23:in `_app_views_documents_index_html_erb__325095671637555450_70112543984180'
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:19:23 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-03 01:19:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 172ms (Views: 138.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-03 01:20:38 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cFV9PnyXF/gJBmJ6rGy3xiYnt7zElcxrZEH6Zte6CAjEoNkpS+dN+nQuptnYrtOS4+64dztGmRXUEn4hFOo5Qg==", "user"=>{"email"=>"a@b.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/devise-4.5.0/lib/devise/models/rememberable.rb:62
+Completed 401 Unauthorized in 157ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-03 01:20:38 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-03 01:20:55 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d+dg+oBPU2vy0R6IjX6diZYCFz6KSeYjh0I6EpChinXDEsTttz8JaY/52iv5vPndU8sY9XWas103Eb5VU/G7Pw==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:22
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-03 01:20:56 -0600
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.0/gems/orm_adapter-0.5.0/lib/orm_adapter/adapters/active_record.rb:17
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 95ms (Views: 71.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-04 00:38:32 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-04 00:38:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 22194ms (Views: 22149.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 12:00:26 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-08 12:00:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1057ms (Views: 1031.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-08 12:00:46 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JQSttBBzzFAuED9FjtePYCIG1WgYYYd2SCSlLl/Co8lbjAUui6cqbricp8Qc6DXdilI5CWpDHLekkWh8EgvZOw==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 232ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 12:00:46 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 121ms (Views: 99.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-08 12:02:37 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-08 12:02:47 -0600
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT "documents".* FROM "documents"[0m
+  ↳ app/views/documents/index.html.erb:47
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 107ms (Views: 100.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-08 12:02:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

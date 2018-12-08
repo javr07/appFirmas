@@ -1,23 +1,66 @@
-<head>
-	<div class="jumbotron bg-info text-center">
-    <h1><font color="white">FirmAndando</font></h1>
-</div>
-</head>
-<body>
-	<center>
-		<h2>Documentos</h2>
-	</center>
 
-<br />
-	<div class="card-columns" id="cards">
-		<% @documents.each do |document| %>
-		<div class='card bg-light'>
-			<div class='card-body text-center'>
-				<h4 class='card-title'><%= document.nombre %></h4>
-				<p class='card-text'><%= document.created_at %></p>
-				<%= link_to 'Visualizar', document_path(document) %>
-			</div>
+<div class="wrapper">
+	<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>¿Qué puedo hacer?</h3>
 		</div>
-  	<% end -%>
+		<ul class="list-unstyled components">
+			<li class="active">
+				<a href="#home">Inicio</a>
+			</li>
+			<% if current_user.try(:admin?) %>
+			<li>
+				<a href="#">Administrar página</a>
+			</li>
+			<% end %>
+			<li>
+				<a href="#">Subir documento</a>
+			</li>
+			<li>
+				<a href="#">Firmar documento</a>
+			</li>
+			<li>
+				<%= link_to(current_user.nombre, edit_user_registration_path) %>
+			</li>
+		</ul>
+	</nav>
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fas fa-aling-left"></i>
+						<span>Menú</span>
+					</button>
+				</div>
+				<div class="col-2">
+					<a class="btn btn-danger" role="button" href=<%=destroy_user_session_path %>> Cerrar sesión
+					
+					</a>
+				</div>
+			</div>
+		<br/>
+		<center>
+			<h2>Documentos</h2>
+		</center><br />
+		<div class="card-columns" id="cards">
+			<% @documents.each do |document| %>
+			<div class='card bg-light'>
+				<div class='card-body text-center'>
+					<h4 class='card-title'><%= document.nombre %></h4>
+					<p class='card-text'><%= document.created_at %></p>
+					<%= link_to 'Visualizar', document_path(document) %>
+				</div>
+			</div>
+			<% end -%>
+		</div>
 	</div>
-</body>
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+			});
+		});
+	</script>
+</div>
