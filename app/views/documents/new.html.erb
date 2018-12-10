@@ -1,23 +1,29 @@
-<div class="jumbotron bg-info text-center">
-    <h1><font color="white">FirmAndando</font></h1>
+<div class="jumbotron bg-primary text-center">
+  <h1><font color="white">FirmAndando</font></h1>
 </div>
-
-<h2>Documentos</h2>
-<br />
-<%= form_with scope: :documents, url: documents_path, local: true do |form| %>
+<div class="border-form-div-extra">
+  <h2>Subir documento</h2>
+  <br />
+  <%= form_with model: @document, local: true do |form| %>
   <p>
     <%= form.label :Nombre %><br>
-    <%= form.nombre_field :nombre %>
+    <%= form.text_field :nombre, :class=>'form-control'%>
+  </p>
+  <p>
+    <%= form.label :"Archivo (PDF)" %><br>
+    <%= form.file_field :file, accept: 'application/pdf' %>
   </p>
 
- 	<%= form.label :Archivo %><br>
-    <%= form.nombre_field :title %>
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text, required :class=>'form-control'%>
+    <%= form.label :Descripción %><br>
+    <%= form.text_area :descripcion, :class=>'form-control'%>
   </p>
- 
+
   <p>
     <%= form.submit "Registrar",:class=>'btn btn-primary' %>
   </p>
-<% end %>
+  <% end %>
+  <p>
+    <%= link_to "Regresar", :back %>
+  </p>
+</div>

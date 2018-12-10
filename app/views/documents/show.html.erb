@@ -1,0 +1,27 @@
+<head>
+	<div class="jumbotron bg-primary text-center">
+		<h1><font color="white">FirmAndando</font></h1>
+	</div>
+    <%= link_to "Regresar", :back %>
+</head>
+<body>
+	<div class="border-form-div-extra">
+		<h2>Detalles</h2>
+		<p>
+			<strong>Nombre:</strong>
+			<%= @document.nombre %>
+		</p><br>
+		<p>
+			<strong>Descripción:</strong>
+			<%= @document.descripcion %>
+		</p>
+		<%= link_to 'Abrir documento', @document.file %>
+		</br><br>
+		<%= link_to 'Descargar', @document.file, download: '' %>
+	</div>
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
+</div>
+</body>
+
+

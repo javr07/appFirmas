@@ -1,12 +1,12 @@
-<div class="border-form-div">
-<h2>Editar <%= resource_name.to_s.humanize %></h2>
+<div class="border-form-div-extra">
+<h2>Editar <%= current_user.nombre %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :Correo_electrónico %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=>'form-control' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=>'form-control' %><br>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,19 +17,19 @@
     <%= f.label :Contraseña %> <i>(Déjela en blanco si no desea hacer cambios)</i><br />
     <%= f.password_field :password, autocomplete: "new-password", :class=>'form-control' %>
     <% if @minimum_password_length %>
-      <br />
       <em><%= @minimum_password_length %> longitud mínima</em>
     <% end %>
   </div>
 
   <div class="field">
+    <br />
     <%= f.label :Repita_la_contraseña %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", :class=>'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :Contraseña_actual %> <i>(Es necesario para confirmar los cambios)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.password_field :current_password, autocomplete: "current-password", :class=>'form-control' %><br>
   </div>
 
   <div class="actions">

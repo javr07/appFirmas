@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
 	def index
-		@documents = Document.all
+		@documents = User.find(current_user.id).documents
 	end
 	def show
 		@document = Document.find(params[:id])
@@ -11,12 +11,13 @@ class DocumentsController < ApplicationController
 	def create
 		@document = Document.new(document_params)
 		if @document.save
-			redirect_to @document
+			@document.users << current_user
+			redirect_to @documents
 		else 
 			render 'new'	
 		end
 	end
 	def document_params
-		params.requiere(:document).permit(:nombre, :ruta)
+		params.require(:document).permit(:nombre, :file, :descripcion)
 	end
 end

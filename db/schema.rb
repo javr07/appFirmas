@@ -10,23 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_02_221923) do
+ActiveRecord::Schema.define(version: 2018_12_10_060747) do
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "documents", force: :cascade do |t|
     t.string "nombre"
-    t.string "ruta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "descripcion"
   end
 
   create_table "documents_signatures", id: false, force: :cascade do |t|
     t.integer "document_id", null: false
     t.integer "signature_id", null: false
+    t.index ["document_id", "signature_id"], name: "index_documents_signatures_on_document_id_and_signature_id"
+    t.index ["signature_id", "document_id"], name: "index_documents_signatures_on_signature_id_and_document_id"
   end
 
   create_table "documents_users", id: false, force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "document_id", null: false
+    t.index ["document_id", "user_id"], name: "index_documents_users_on_document_id_and_user_id"
+    t.index ["user_id", "document_id"], name: "index_documents_users_on_user_id_and_document_id"
   end
 
   create_table "signatures", force: :cascade do |t|
