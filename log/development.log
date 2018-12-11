@@ -16040,3 +16040,1516 @@ Processing by DocumentsController#index as HTML
 Completed 200 OK in 190ms (Views: 183.8ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DropTable (20181210215107)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "documents_signatures"[0m
+  ↳ db/migrate/20181210215107_drop_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181210215107"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DropTable (20181210215925)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "signatures"[0m
+  ↳ db/migrate/20181210215925_drop_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181210215925"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSignatures (20181210223257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181210223257_create_signatures.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "signatures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "clavehash" varchar, "document_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2ecb9ebbce"
+FOREIGN KEY ("document_id")
+  REFERENCES "documents" ("id")
+, CONSTRAINT "fk_rails_ff92bb8ee0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20181210223257_create_signatures.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_signatures_on_document_id" ON "signatures" ("document_id")[0m
+  ↳ db/migrate/20181210223257_create_signatures.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_signatures_on_user_id" ON "signatures" ("user_id")[0m
+  ↳ db/migrate/20181210223257_create_signatures.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181210223257"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-10 22:56:02 -0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 13805ms (Views: 13752.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 22:56:24 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 159ms (Views: 149.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 22:56:24 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (147.9ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 155ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 22:56:24 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 22:57:32 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 94ms (Views: 88.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 22:57:33 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-10 22:57:38 -0600
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 96ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 22:57:46 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 22:57:46 -0600
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (7.2ms)
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 119ms (Views: 114.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 22:57:46 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:00:56 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 130ms (Views: 124.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:00:57 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowMToyNC45NDFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a6b6c05fcb6757771e78211cfd876d38b0e03daf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:01:49 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 100ms (Views: 94.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:01:50 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:01:51 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-10 23:01:57 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:02:03 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTowNjo1MC45NTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--4612ca296cda8811f69297178bbadc9ece9a2adf", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-10 23:02:13 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 103ms (Views: 93.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:20:41 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:20:41 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS40ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5dbbd78b04ffd974fedf2cf4af19e0f6de78e32/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS40ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--f5dbbd78b04ffd974fedf2cf4af19e0f6de78e32/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 28ms (ActiveRecord: 0.6ms)
+
+
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 300ms (Views: 288.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:20:41 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:20:41 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-10 23:21:01 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:21:03 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:21:09 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 109ms (Views: 104.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:21:09 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:21:09 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-10 23:21:20 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 94ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:21:21 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:24:30 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (2.8ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:24:30 -0600
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as PDF
+  ↳ app/views/documents/show.html.erb:22
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  Rendered documents/show.html.erb within layouts/application (157.5ms)
+Completed 200 OK in 1170ms (Views: 1106.3ms | ActiveRecord: 9.8ms)
+
+
+[36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 925ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:24:31 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-10 23:24:36 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 104ms (Views: 100.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:24:37 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNToyNTo0MS43ODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--3fb1c37c5add342984a31c5bd10c13088843742a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:24:54 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  Rendered documents/show.html.erb within layouts/application (36.1ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.):
+    19: 		</br><br>
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= link_to_if(@current_user != Document.find(@document).users, "Compartir documento", { action: "edit"})%>
+    23: 	</div>
+    24: <div class="embed-responsive embed-responsive-16by9">
+    25: 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
+  
+app/views/documents/show.html.erb:22:in `_app_views_documents_show_html_erb___1534306509867189377_70275036308000'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:25:27 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  Rendered documents/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Unsupported argument type: #<Document:0x00007fd45c793960> (Document)):
+    19: 		</br><br>
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= link_to_if(@current_user != Document.find_by(@document).users, "Compartir documento", { action: "edit"})%>
+    23: 	</div>
+    24: <div class="embed-responsive embed-responsive-16by9">
+    25: 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
+  
+app/views/documents/show.html.erb:22:in `_app_views_documents_show_html_erb___1534306509867189377_70275030619000'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:25:38 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  Rendered documents/show.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (Unsupported argument type: 11 (Integer)):
+    19: 		</br><br>
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= link_to_if(@current_user != Document.find_by(@document.id).users, "Compartir documento", { action: "edit"})%>
+    23: 	</div>
+    24: <div class="embed-responsive embed-responsive-16by9">
+    25: 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
+  
+app/views/documents/show.html.erb:22:in `_app_views_documents_show_html_erb___1534306509867189377_70275038301140'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:26:29 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mCACHE Document Load (0.0ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:23
+  Rendered documents/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 94ms (Views: 88.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:26:30 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (343.9ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 350ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:26:31 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:27:58 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ? LIMIT ?[0m  [["document_id", 11], ["LIMIT", 11]]
+  ↳ /Users/javr/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered documents/show.html.erb within layouts/application (51.8ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for #<User::ActiveRecord_Associations_CollectionProxy:0x00007fd45c7b8f08>):
+    19: 		</br><br>
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= Document.find(@document.id).users.nombre %>
+    23: 		<%= link_to_if(@current_user != Document.find(@document.id).users, "Compartir documento", { action: "edit"})%>
+    24: 	</div>
+    25: <div class="embed-responsive embed-responsive-16by9">
+  
+app/views/documents/show.html.erb:22:in `_app_views_documents_show_html_erb___1534306509867189377_70275030734520'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:28:29 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ? LIMIT ?[0m  [["document_id", 11], ["LIMIT", 11]]
+  ↳ /Users/javr/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered documents/show.html.erb within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for #<User::ActiveRecord_Associations_CollectionProxy:0x00007fd458d050c8>):
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= user = Document.find(@document.id).users
+    23: 			user.nombre %>
+    24: 		<%= link_to_if(@current_user != Document.find(@document.id).users, "Compartir documento", { action: "edit"})%>
+    25: 	</div>
+    26: <div class="embed-responsive embed-responsive-16by9">
+  
+app/views/documents/show.html.erb:23:in `_app_views_documents_show_html_erb___1534306509867189377_70274995996460'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:30:01 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ? LIMIT ?[0m  [["document_id", 11], ["LIMIT", 11]]
+  ↳ /Users/javr/.rvm/rubies/ruby-2.5.3/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  Rendered documents/show.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for #<User::ActiveRecord_Associations_CollectionProxy:0x00007fd45c7b2810>):
+    20: 		<%= link_to 'Descargar', @document.file, download: '' %>
+    21: 		</br><br>
+    22: 		<%= @user = Document.find(@document.id).users
+    23: 			@user.nombre %>
+    24: 		<%= link_to_if(@current_user != Document.find(@document.id).users, "Compartir documento", { action: "edit"})%>
+    25: 	</div>
+    26: <div class="embed-responsive embed-responsive-16by9">
+  
+app/views/documents/show.html.erb:23:in `_app_views_documents_show_html_erb___1534306509867189377_70275030734740'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:31:52 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:25
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:25
+  Rendered documents/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 103ms (Views: 96.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:31:53 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:32:06 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozMTozMC43ODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--6f2cb6169e1119ace38f0af23204c508105bd022", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:32:26 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:25
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:25
+  Rendered documents/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 90ms (Views: 85.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:32:26 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:32:26 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-10 23:32:33 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:32:35 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-10 23:33:36 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:22
+  Rendered documents/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-10 23:33:37 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNTozNzoyNi42NjRaIiwicHVyIjoiYmxvYl9rZXkifX0=--c00f15cb44d2d31735ac652e5f3927a74fc71289", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-10 23:38:47 -0600
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 100ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 00:39:28 -0600
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (1.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 235ms (Views: 225.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:39:30 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting =>
+...ment.descripcion, :descripcion, :class=>'form-control') );@o...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+...cion, :class=>'form-control') );@output_buffer.safe_append='
+...                              ^):
+  
+app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting =>
+app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:42:38 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/documents/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:43:04 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/documents/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:43:51 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (677.4ms)
+Completed 500 Internal Server Error in 700ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x00007fd458358598>:0x00007fd45c790170>
+Did you mean?  fork):
+    24: 				</div>
+    25: 				<div class="modal-footer">
+    26: 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+    27: 					<%= form.submit "Cambiar",:class=>'btn btn-primary' %>
+    28: 				</div>
+    29: 			</div>
+    30: 		</div>
+  
+app/views/documents/show.html.erb:27:in `_app_views_documents_show_html_erb___1534306509867189377_70275030615680'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:45:25 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:45
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:45
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:49
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:49
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  Rendered documents/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 108ms (Views: 102.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:45:26 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (5.0ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:45:26 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:46:43 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:46
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:46
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:50
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:50
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:53
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:53
+  Rendered documents/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:46:44 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:47:22 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:46
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:46
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:50
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:50
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:53
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:53
+  Rendered documents/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 107ms (Views: 101.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:47:22 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNjo1MDoyNi41NTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--3b38fb66329c655b88ca087b2c49583722712345", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:52:36 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting ')'
+...end=( form.text_field (:nombre, :value => @document.nombre, ...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+...e => @document.nombre, :class=>'form-control'));@output_buff...
+...                             ^~
+/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+...ombre, :class=>'form-control'));@output_buffer.safe_append='
+...                              ^
+/Users/javr/appFirmas/app/views/documents/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting ')'
+app/views/documents/show.html.erb:21: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+app/views/documents/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2018-12-11 00:54:06 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 93.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:54:09 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  Rendered documents/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting ')'
+...end=( form.text_field (:nombre, :value => @document.nombre, ...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+...e => @document.nombre, :class=>'form-control'));@output_buff...
+...                             ^~
+/Users/javr/appFirmas/app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+...ombre, :class=>'form-control'));@output_buffer.safe_append='...
+...                              ^
+/Users/javr/appFirmas/app/views/documents/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/documents/show.html.erb:21: syntax error, unexpected ',', expecting ')'
+app/views/documents/show.html.erb:21: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+app/views/documents/show.html.erb:21: syntax error, unexpected ')', expecting keyword_end
+app/views/documents/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 00:55:02 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 199ms (Views: 193.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:55:03 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.7ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowMDowMy4wMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--441c0be403f053256b0ad83f8cbfa719c6d1e180/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowMDowMy4wMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--441c0be403f053256b0ad83f8cbfa719c6d1e180/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowMDowMy4wMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--441c0be403f053256b0ad83f8cbfa719c6d1e180/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 00:55:03 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowMDowMy4wMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--441c0be403f053256b0ad83f8cbfa719c6d1e180", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/documents/11" for 127.0.0.1 at 2018-12-11 00:58:03 -0600
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for DocumentsController):
+  
+actionpack (5.2.1.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.2) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 01:02:00 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 179ms (Views: 151.4ms | ActiveRecord: 5.6ms)
+
+
+Started PATCH "/documents/11" for 127.0.0.1 at 2018-12-11 01:02:07 -0600
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F1cHzgkY5d6gZMriSnS6HzORWMf1KTCJBoh8zUuAo2ij9NjR+/mj4Ls7Rr3GP+WAH108s1Vg1C28t6C5OxFzhw==", "document"=>{"nombre"=>"Documento 11", "descripcion"=>"kjhgfds"}, "commit"=>"Cambiar", "id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/documents_controller.rb:22
+  [1m[36mDocument Update (0.8ms)[0m  [1m[33mUPDATE "documents" SET "nombre" = ?, "updated_at" = ? WHERE "documents"."id" = ?[0m  [["nombre", "Documento 11"], ["updated_at", "2018-12-11 07:02:07.103809"], ["id", 11]]
+  ↳ app/controllers/documents_controller.rb:22
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/documents_controller.rb:22
+Redirected to http://localhost:3000/documents/11
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 01:02:07 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 140ms (Views: 135.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 01:02:07 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowNzowNy42MzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a9636f623cf37254b88b95aca087b1b667ba052/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowNzowNy42MzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a9636f623cf37254b88b95aca087b1b667ba052/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowNzowNy42MzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a9636f623cf37254b88b95aca087b1b667ba052/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 01:02:07 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwNzowNzowNy42MzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--2a9636f623cf37254b88b95aca087b1b667ba052", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:05:04 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+     6: </head>
+     7: <div class="border-form-div-extra">
+     8: 	<h2>Compartir documento</h2>
+     9: 	<h5><%= @document.nombre %></h5>
+    10: 	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">	
+    11: 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+    12: 	<ul class="list-group" id="listEmails">
+  
+app/views/documents/edit.html.erb:9:in `_app_views_documents_edit_html_erb___3804340376431539259_70275052827800'
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:08:45 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     6: </head>
+     7: <div class="border-form-div-extra">
+     8: 	<h2>Compartir documento</h2>
+     9: 	<h5><%= @document.id %></h5>
+    10: 	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">	
+    11: 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+    12: 	<ul class="list-group" id="listEmails">
+  
+app/views/documents/edit.html.erb:9:in `_app_views_documents_edit_html_erb___3804340376431539259_70275005523860'
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:13:52 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     7: <div class="border-form-div-extra">
+     8: 	<h2>Compartir documento</h2>
+     9: 	<%= form_with model: @document, local: true do |form| %>
+    10: 	<h5><%= @document.id %></h5>
+    11: 	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">	
+    12: 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+    13: 	<ul class="list-group" id="listEmails">
+  
+app/views/documents/edit.html.erb:10:in `block in _app_views_documents_edit_html_erb___3804340376431539259_70275048307820'
+app/views/documents/edit.html.erb:9:in `_app_views_documents_edit_html_erb___3804340376431539259_70275048307820'
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:14:01 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.1ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODoxOTowMS4zMDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe5396689bb3b92b43e2943d2125b3118276644a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODoxOTowMS4zMDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe5396689bb3b92b43e2943d2125b3118276644a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODoxOTowMS4zMDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe5396689bb3b92b43e2943d2125b3118276644a/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:14:01 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODoxOTowMS4zMDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--fe5396689bb3b92b43e2943d2125b3118276644a", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:14:11 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+     7: <div class="border-form-div-extra">
+     8: 	<h2>Compartir documento</h2>
+     9: 	<%= form_with model: @document, local: true do |form| %>
+    10: 	<h5><%= @document.id %></h5>
+    11: 	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">	
+    12: 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+    13: 	<ul class="list-group" id="listEmails">
+  
+app/views/documents/edit.html.erb:10:in `block in _app_views_documents_edit_html_erb___3804340376431539259_70275009216340'
+app/views/documents/edit.html.erb:9:in `_app_views_documents_edit_html_erb___3804340376431539259_70275009216340'
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:19:19 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+     7: <div class="border-form-div-extra">
+     8: 	<h2>Compartir documento</h2>
+     9: 	<%= form_with model: @document, local: true do |form| %>
+    10: 	<h5><%= @document.nombre %></h5>
+    11: 	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">	
+    12: 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+    13: 	<ul class="list-group" id="listEmails">
+  
+app/views/documents/edit.html.erb:10:in `block in _app_views_documents_edit_html_erb___3804340376431539259_70275054304020'
+app/views/documents/edit.html.erb:9:in `_app_views_documents_edit_html_erb___3804340376431539259_70275054304020'
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:25:42 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 138ms (Views: 110.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:26:39 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:26:52 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 100ms (Views: 96.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:27:01 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 75.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 02:27:23 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 86ms (Views: 82.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:34 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 24ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:34 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.2ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 02:27:39 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 130ms (Views: 120.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:39 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 02:27:42 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:42 -0600
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (18.4ms)
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 142ms (Views: 134.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:42 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 02:27:46 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:46 -0600
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+Processing by ActiveStorage::DiskController#show as PDF
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 130ms (Views: 121.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:46 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 02:27:49 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 102ms (Views: 96.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 02:27:50 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQwODozMjozNC41MzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--fa1934b4672e448a6802fb8b40e4fed3793ae66b", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 02:27:51 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 120ms (Views: 109.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-11 02:28:03 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 02:28:03 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 02:28:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 104ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+

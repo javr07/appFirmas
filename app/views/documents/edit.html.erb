@@ -1,0 +1,29 @@
+<head>
+	<div class="jumbotron bg-primary text-center">
+		<h1><font color="white">FirmAndando</font></h1>
+	</div>
+    <%= link_to "Regresar", :back %>
+</head>
+<div class="border-form-div-extra">
+	<h2>Compartir documento</h2>
+	<%= form_with model: @document, local: true do |form| %>
+	<h5><%= @document.nombre %></h5>
+	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">
+	<br><br>
+	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
+	<br><br>
+	<ul class="list-group" id="listEmails">
+		
+	</ul><br><br>
+	<%= form.submit "Cambiar",:class=>'btn btn-primary' %>
+	<% end %>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function () {
+			$('#addEmail').on('click', function () {
+				
+			});
+		});
+	</script>
+</div>			

@@ -1,3 +1,4 @@
 class Signature < ApplicationRecord
-	has_and_belongs_to_many :documents
+  belongs_to :document
+  belongs_to :user
 end

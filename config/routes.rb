@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :documents
+  resources :documents do
+  	resources :signatures
+  end
   
   devise_for :users
   authenticate :user do

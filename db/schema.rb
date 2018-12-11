@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_10_060747) do
+ActiveRecord::Schema.define(version: 2018_12_10_223257) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,13 +40,6 @@ ActiveRecord::Schema.define(version: 2018_12_10_060747) do
     t.text "descripcion"
   end
 
-  create_table "documents_signatures", id: false, force: :cascade do |t|
-    t.integer "document_id", null: false
-    t.integer "signature_id", null: false
-    t.index ["document_id", "signature_id"], name: "index_documents_signatures_on_document_id_and_signature_id"
-    t.index ["signature_id", "document_id"], name: "index_documents_signatures_on_signature_id_and_document_id"
-  end
-
   create_table "documents_users", id: false, force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "document_id", null: false
@@ -55,10 +48,13 @@ ActiveRecord::Schema.define(version: 2018_12_10_060747) do
   end
 
   create_table "signatures", force: :cascade do |t|
-    t.string "claveHash"
-    t.datetime "fecha"
+    t.string "clavehash"
+    t.integer "document_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["document_id"], name: "index_signatures_on_document_id"
+    t.index ["user_id"], name: "index_signatures_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

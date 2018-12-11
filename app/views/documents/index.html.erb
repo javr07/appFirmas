@@ -13,9 +13,11 @@
 				<%= link_to('Administrar página', rails_admin_path) %>
 			</li>
 			<% end %>
+			<% if current_user.try(:coordinador?) %>
 			<li>
 				<%= link_to 'Subir documento', new_document_path %>
 			</li>
+			<% end %>
 			<li>
 				<a href="#">Firmar documento</a>
 			</li>

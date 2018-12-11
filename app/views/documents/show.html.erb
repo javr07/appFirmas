@@ -2,23 +2,55 @@
 	<div class="jumbotron bg-primary text-center">
 		<h1><font color="white">FirmAndando</font></h1>
 	</div>
-    <%= link_to "Regresar", :back %>
+	<%= link_to "Regresar", :back %>
 </head>
 <body>
-	<div class="border-form-div-extra">
-		<h2>Detalles</h2>
-		<p>
-			<strong>Nombre:</strong>
-			<%= @document.nombre %>
-		</p><br>
-		<p>
-			<strong>Descripción:</strong>
-			<%= @document.descripcion %>
-		</p>
-		<%= link_to 'Abrir documento', @document.file %>
-		</br><br>
-		<%= link_to 'Descargar', @document.file, download: '' %>
+	<div class="modal fade" id="infoDescripcion" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h5 class="modal-title" id="tituloModal">Descripción</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="md-form mb-5">
+					<%= form_with model: @document, local: true do |form| %>
+					<%= form.label :Nombre %><br>
+    				<%= form.text_field(:nombre, :value => @document.nombre, :class=>'form-control')%><br>
+					<%= form.label :Descripción %><br>
+    				<%= form.text_area(:descripcion, :value => @document.descripcion, :class=>'form-control') %>
+    				</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<%= form.submit "Cambiar",:class=>'btn btn-primary' %>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
+<div class="border-form-div-extra">
+	<h2>Detalles</h2>
+	<p>
+		<strong>Nombre:</strong>
+		<%= @document.nombre %>
+	</p><br>
+	<p>
+		<strong>Descripción:</strong>
+		<%= @document.descripcion %>
+	</p>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoDescripcion">Editar</button>
+	<br><br>
+	<h5>Opciones</h5><br>
+	<%= link_to 'Abrir documento', @document.file %>
+</br><br>
+<%= link_to 'Descargar', @document.file, download: '' %>
+</br><br>
+<%= link_to_if(@document = current_user.documents.find(@document.id), "Compartir documento", { action: "edit"})%>
+</div>
 <div class="embed-responsive embed-responsive-16by9">
 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
 </div>
