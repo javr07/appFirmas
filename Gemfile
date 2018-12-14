@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'mysql2'
+gem 'rake', '~> 12.3', '>= 12.3.2'
+gem 'yaml_db'
 gem 'toastr-rails'
 gem 'rails-i18n'
 gem 'bootstrap'

@@ -1,0 +1,155 @@
+
+---
+active_storage_attachments:
+  columns:
+  - id
+  - name
+  - record_type
+  - record_id
+  - blob_id
+  - created_at
+  records: 
+  - - 9
+    - file
+    - Document
+    - 10
+    - 9
+    - '2018-12-10 06:22:16.684056'
+  - - 10
+    - file
+    - Document
+    - 11
+    - 10
+    - '2018-12-10 06:23:28.116919'
+
+---
+active_storage_blobs:
+  columns:
+  - id
+  - key
+  - filename
+  - content_type
+  - metadata
+  - byte_size
+  - checksum
+  - created_at
+  records: 
+  - - 9
+    - zjK9mVqzVtqGsot7wyGq9cs1
+    - ValdiviaJoseEvaluacionWWW.pdf
+    - application/pdf
+    - '{"identified":true,"analyzed":true}'
+    - 143267
+    - mcejV+FaFHBqPVuktWY68Q==
+    - '2018-12-10 06:22:16.660606'
+  - - 10
+    - uGjzSwjy78Q11u74pkFrJdvc
+    - ValdiviaJoseEvaluacionWWW.pdf
+    - application/pdf
+    - '{"identified":true,"analyzed":true}'
+    - 143267
+    - mcejV+FaFHBqPVuktWY68Q==
+    - '2018-12-10 06:23:28.088046'
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-11-28 10:23:59.806543'
+    - '2018-11-28 10:23:59.806543'
+
+---
+documents:
+  columns:
+  - id
+  - nombre
+  - created_at
+  - updated_at
+  - descripcion
+  records: 
+  - - 10
+    - '1234'
+    - '2018-12-10 06:22:16.680571'
+    - '2018-12-10 06:22:16.686508'
+    - kjhgfds
+  - - 11
+    - Documento 11
+    - '2018-12-10 06:23:28.112800'
+    - '2018-12-11 22:31:53.253282'
+    - Alejandro
+
+---
+documents_users:
+  columns:
+  - user_id
+  - document_id
+  records: 
+  - - 4
+    - 11
+
+---
+users:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - admin
+  - nombre
+  - coordinador
+  records: 
+  - - 1
+    - '2018-11-28 10:56:15.677544'
+    - '2018-12-03 07:10:04.783864'
+    - a@b.com
+    - "$2a$11$VCT0W.uGAMxnOGj5Z1Nqa.ql4lS6DkV/QLeNItCOD8tjcOwfi8B/a"
+    - 
+    - 
+    - 
+    - ''
+    - 
+    - 
+    - false
+    - ''
+    - true
+  - - 3
+    - '2018-11-29 00:35:13.535840'
+    - '2018-11-29 00:35:13.535840'
+    - arcamsoft@gmail.com
+    - "$2a$11$0U9kvGJl6MCvzP7Ph4prtuyTt2iZzHRGF5RkXgYnSH.bSVoyEeDxq"
+    - 
+    - 
+    - 
+    - MKKwSL4PV8yPMwySqnCz
+    - 
+    - '2018-11-29 00:35:13.536005'
+    - false
+    - 
+    - false
+  - - 4
+    - '2018-12-02 22:30:33.317580'
+    - '2018-12-09 17:07:53.305575'
+    - ppjavr@hotmail.com
+    - "$2a$11$54Eog3NKBlsSixDiS6KcdOZXicL6O5ZDfQmBzikXSsACT6fz/RJ7W"
+    - 
+    - 
+    - 
+    - Df_SmhEyBpWXdsbbb-nh
+    - '2018-12-09 17:07:53.304554'
+    - 
+    - true
+    - José Valdivia
+    - true

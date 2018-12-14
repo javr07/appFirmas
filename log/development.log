@@ -17553,3 +17553,882 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 104ms (Views: 102.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:27:53 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:27:54 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 841ms (Views: 818.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-12-11 16:28:23 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-12-11 16:28:31 -0600
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 109ms (Views: 104.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:28:35 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 130ms (Views: 127.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2018-12-11 16:28:37 -0600
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 109ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:28:41 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:28:44 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PZJh7BLCZpMFaoDaRxVhM1WEeec7uPwEB2yR/rTGiCPEvgGLGjZlsqjhL4hiF0dZhvXtyR66lB2l7xkJkXKaQA==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 198ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:28:44 -0600
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.9ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 123ms (Views: 102.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2018-12-11 16:29:42 -0600
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 120ms (Views: 113.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-11 16:30:38 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.3ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (22.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (11.3ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (39.6ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.9ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (7.9ms)
+Completed 200 OK in 1222ms (Views: 815.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-11 16:30:40 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (19.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (36.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (8.7ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (8.1ms)
+Completed 200 OK in 411ms (Views: 398.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/document?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-11 16:30:52 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"document"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY documents.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 11]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 10]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (76.6ms)
+Completed 200 OK in 128ms (Views: 109.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/document/11?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-11 16:30:56 -0600
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"document", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? ORDER BY "documents"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 11]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml:3
+  [1m[36mSignature Load (0.7ms)[0m  [1m[34mSELECT "signatures".* FROM "signatures" WHERE "signatures"."document_id" = ?[0m  [["document_id", 11]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml:3
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/types/active_storage.rb:38
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/types/active_storage.rb:38
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (41.0ms)
+Completed 200 OK in 78ms (Views: 63.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/admin/document?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-11 16:31:00 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"document"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY documents.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 11]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 10]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (64.8ms)
+Completed 200 OK in 103ms (Views: 90.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/document/11/show_in_app" for 127.0.0.1 at 2018-12-11 16:31:11 -0600
+Processing by RailsAdmin::MainController#show_in_app as HTML
+  Parameters: {"model_name"=>"document", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? ORDER BY "documents"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+Redirected to http://localhost:3000/documents/11
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:31:11 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 92ms (Views: 86.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:31:11 -0600
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:31:11 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (2.0ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:31:23 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.9ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started PATCH "/documents/11" for 127.0.0.1 at 2018-12-11 16:31:53 -0600
+Processing by DocumentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XNeUiCDLEqFjAK2L6BJf65kOyOvaypDOXsuMPz5aeWcyK1FJFIi3IyOMWPC0z5s7H3EhE0Kv2zJwNRBHvzZOLg==", "document"=>{"nombre"=>"Documento 11", "descripcion"=>"Alejandro"}, "commit"=>"Cambiar", "id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/documents_controller.rb:25
+  [1m[36mDocument Update (0.8ms)[0m  [1m[33mUPDATE "documents" SET "descripcion" = ?, "updated_at" = ? WHERE "documents"."id" = ?[0m  [["descripcion", "Alejandro"], ["updated_at", "2018-12-11 22:31:53.253282"], ["id", 11]]
+  ↳ app/controllers/documents_controller.rb:25
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/documents_controller.rb:25
+Redirected to http://localhost:3000/documents/11
+Completed 302 Found in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:31:53 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 117ms (Views: 109.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:31:53 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:32:03 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.4ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 274ms (Views: 266.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:32:03 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/document" for 127.0.0.1 at 2018-12-11 16:32:09 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"document"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY documents.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 11]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "documents_users" ON "users"."id" = "documents_users"."user_id" WHERE "documents_users"."document_id" = ?[0m  [["document_id", 10]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/fields/association.rb:19
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (81.7ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.8ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (36.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (7.7ms)
+Completed 200 OK in 486ms (Views: 475.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:32:34 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.5ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:32:38 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 96ms (Views: 91.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:32:38 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjozNjoxMS42NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--53da51a42633aca0402469f0ea956030094f7bd3", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 16:32:43 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 90ms (Views: 85.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:36:12 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8/ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:36:12 -0600
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+Processing by ActiveStorage::BlobsController#show as PDF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1488469267289017166fa53f3b89462119eb1ff8", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: uGjzSwjy78Q11u74pkFrJdvc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf)[0m
+  ↳ app/views/documents/show.html.erb:52
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Rendered documents/show.html.erb within layouts/application (23.2ms)
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:36:12 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 134ms (Views: 126.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:36:12 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/11/edit" for 127.0.0.1 at 2018-12-11 16:36:13 -0600
+Processing by DocumentsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:12
+  Rendering documents/edit.html.erb within layouts/application
+  Rendered documents/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 123ms (Views: 116.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/documents/11" for 127.0.0.1 at 2018-12-11 16:36:14 -0600
+Processing by DocumentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mDocument Load (0.1ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:6
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:36:14 -0600
+  Rendering documents/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:48
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ? AND "documents"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 11], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:52
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Document"], ["name", "file"], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+Processing by ActiveStorage::DiskController#show as PDF
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/documents/show.html.erb:55
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+  Rendered documents/show.html.erb within layouts/application (21.3ms)
+[36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 194ms (Views: 187.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4/ValdiviaJoseEvaluacionWWW.pdf?content_type=application%2Fpdf&disposition=inline%3B+filename%3D%22ValdiviaJoseEvaluacionWWW.pdf%22%3B+filename%2A%3DUTF-8%27%27ValdiviaJoseEvaluacionWWW.pdf" for 127.0.0.1 at 2018-12-11 16:36:14 -0600
+Processing by ActiveStorage::DiskController#show as PDF
+  Parameters: {"content_type"=>"application/pdf", "disposition"=>"inline; filename=\"ValdiviaJoseEvaluacionWWW.pdf\"; filename*=UTF-8''ValdiviaJoseEvaluacionWWW.pdf", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkVWRxZWxOM2FuazNPRkV4TVhVM05IQnJSbkpLWkhaakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSmxhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlWbUZzWkdsMmFXRktiM05sUlhaaGJIVmhZMmx2YmxkWFZ5NXdaR1lpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjFaaGJHUnBkbWxoU205elpVVjJZV3gxWVdOcGIyNVhWMWN1Y0dSbUJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVVZWEJ3YkdsallYUnBiMjR2Y0dSbUJqc0dWQT09IiwiZXhwIjoiMjAxOC0xMi0xMVQyMjo0MToxMi4xODFaIiwicHVyIjoiYmxvYl9rZXkifX0=--c1bb8d449340476fa802a8a036dfb02ef6adb8c4", "filename"=>"ValdiviaJoseEvaluacionWWW"}
+[36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: uGjzSwjy78Q11u74pkFrJdvc[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/documents/" for 127.0.0.1 at 2018-12-11 16:36:17 -0600
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-11 16:36:42 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:36:42 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:36:42 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:37:18 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBUcEkUr/3UwR9MZVoyexDu+nSg214IlWuGL6tJvH9QGXlOjiwYLgTh9wef98K+eYhIDGLL2YfNZuBr95ZXy2A==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppjavr@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 190ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:37:18 -0600
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 90ms (Views: 86.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-11 16:37:20 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.2ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (17.4ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (8.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (34.5ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (7.1ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (7.1ms)
+Completed 200 OK in 341ms (Views: 329.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-12-11 16:37:21 -0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "documents"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT  "documents".* FROM "documents" ORDER BY "documents"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "signatures"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mSignature Load (0.4ms)[0m  [1m[34mSELECT  "signatures".* FROM "signatures" ORDER BY "signatures"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:43
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/config/actions/dashboard.rb:34
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (17.2ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (9.9ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_navigation.html.haml (37.1ms)
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.4ms)
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/layouts/rails_admin/pjax.html.haml (6.0ms)
+Completed 200 OK in 402ms (Views: 384.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-11 16:37:24 -0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml:95
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (68.5ms)
+Completed 200 OK in 108ms (Views: 95.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user/4?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2018-12-11 16:37:26 -0600
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/lib/rails_admin/adapters/active_record.rb:16
+  Rendering /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax
+  [1m[36mDocument Load (0.3ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml:3
+  Rendered /Users/javr/.rvm/gems/ruby-2.5.3/bundler/gems/rails_admin-44321b1f6eb1/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (9.6ms)
+Completed 200 OK in 48ms (Views: 36.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:38:02 -0600
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (0.2ms)[0m  [1m[34mSELECT "documents".* FROM "documents" INNER JOIN "documents_users" ON "documents"."id" = "documents_users"."document_id" WHERE "documents_users"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 100ms (Views: 94.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-11 16:38:03 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-11 16:38:03 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:38:03 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 179ms (Views: 175.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation/new" for 127.0.0.1 at 2018-12-11 16:38:06 -0600
+Processing by Devise::ConfirmationsController#new as HTML
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 171ms (Views: 165.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-11 16:38:40 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (10.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE DATABASE `firmasApp` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE DATABASE `db/test`.`sqlite3` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `firmasApp` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `firmasAppTest` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (39.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_attachments` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (34.3ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` int NOT NULL, `blob_id` int NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`))[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_blobs` CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents` CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `descripcion` text)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents_users` CASCADE[0m
+  ↳ db/schema.rb:43
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE `documents_users` (`user_id` int NOT NULL, `document_id` int NOT NULL,  INDEX `index_documents_users_on_document_id_and_user_id`  (`document_id`, `user_id`),  INDEX `index_documents_users_on_user_id_and_document_id`  (`user_id`, `document_id`))[0m
+  ↳ db/schema.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `signatures` CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `signatures` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `clavehash` varchar(255), `document_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_signatures_on_document_id`  (`document_id`),  INDEX `index_signatures_on_user_id`  (`user_id`))[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `admin` tinyint(1) DEFAULT FALSE, `nombre` varchar(255), `coordinador` tinyint(1) DEFAULT FALSE, UNIQUE INDEX `index_users_on_confirmation_token`  (`confirmation_token`), UNIQUE INDEX `index_users_on_email`  (`email`), UNIQUE INDEX `index_users_on_reset_password_token`  (`reset_password_token`))[0m
+  ↳ db/schema.rb:60
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20181210223257)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20181210044453),
+(20181128103024),
+(20181210051947),
+(20181129064259),
+(20181129092840),
+(20181210051715),
+(20181128210216),
+(20181208204641),
+(20181129002256),
+(20181202221923),
+(20181208203629),
+(20181128102112),
+(20181128103200),
+(20181208203110);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-14 06:05:14', '2018-12-14 06:05:14')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_attachments` CASCADE[0m
+  ↳ db/schema.rb:15
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` int NOT NULL, `blob_id` int NOT NULL, `created_at` datetime NOT NULL,  INDEX `index_active_storage_attachments_on_blob_id`  (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness`  (`record_type`, `record_id`, `name`, `blob_id`))[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_blobs` CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key`  (`key`))[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents` CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `descripcion` text)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `documents_users` CASCADE[0m
+  ↳ db/schema.rb:43
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE `documents_users` (`user_id` int NOT NULL, `document_id` int NOT NULL,  INDEX `index_documents_users_on_document_id_and_user_id`  (`document_id`, `user_id`),  INDEX `index_documents_users_on_user_id_and_document_id`  (`user_id`, `document_id`))[0m
+  ↳ db/schema.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `signatures` CASCADE[0m
+  ↳ db/schema.rb:50
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE `signatures` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `clavehash` varchar(255), `document_id` int, `user_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_signatures_on_document_id`  (`document_id`),  INDEX `index_signatures_on_user_id`  (`user_id`))[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  ↳ db/schema.rb:60
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `admin` tinyint(1) DEFAULT FALSE, `nombre` varchar(255), `coordinador` tinyint(1) DEFAULT FALSE, UNIQUE INDEX `index_users_on_confirmation_token`  (`confirmation_token`), UNIQUE INDEX `index_users_on_email`  (`email`), UNIQUE INDEX `index_users_on_reset_password_token`  (`reset_password_token`))[0m
+  ↳ db/schema.rb:60
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES (20181210223257)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (version) VALUES
+(20181210044453),
+(20181128103024),
+(20181210051947),
+(20181129064259),
+(20181129092840),
+(20181210051715),
+(20181128210216),
+(20181208204641),
+(20181129002256),
+(20181202221923),
+(20181208203629),
+(20181128102112),
+(20181128103200),
+(20181208203110);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-12-14 06:05:14', '2018-12-14 06:05:14')[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (3.4ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'test' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-12-14 00:06:42 -0600
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-14 00:06:42 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 933ms (Views: 908.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-14 00:06:46 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xq4LmB+XExod1XW2OfOfqMEK/cw1xMVjGvvWn3jAC8O0Afa6102al8TRzLizxw1y0e7X9ePHQAYu7jUQRYZs7Q==", "user"=>{"email"=>"ppjavr@hotmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'ppjavr@hotmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 203ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-14 00:06:46 -0600
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Processing by DocumentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/documents_controller.rb:3
+  Rendering documents/index.html.erb within layouts/application
+  [1m[36mDocument Load (2.4ms)[0m  [1m[34mSELECT `documents`.* FROM `documents` INNER JOIN `documents_users` ON `documents`.`id` = `documents_users`.`document_id` WHERE `documents_users`.`user_id` = 4[0m
+  ↳ app/views/documents/index.html.erb:48
+  Rendered documents/index.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 161ms (Views: 129.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2018-12-14 00:06:50 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/javr/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-14 00:06:50 -0600
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-14 00:06:50 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
