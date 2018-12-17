@@ -1,7 +1,13 @@
 class User < ApplicationRecord
-	has_and_belongs_to_many :documents
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
+
+  has_many :collaborators
+  has_many :documents, through: :collaborators
+  has_one_attached :image
 end

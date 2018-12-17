@@ -28,6 +28,13 @@
   </div>
 
   <div class="field">
+    <br />
+    <%= f.label :value, value: "Sube una foto de perfil" %><br />
+    <%= f.file_field :image, accept:'image/*', :class=>'form-control-file' %>
+  </div>
+
+  <div class="field">
+  <br />
     <%= f.label :Contraseña_actual %> <i>(Es necesario para confirmar los cambios)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password", :class=>'form-control' %><br>
   </div>

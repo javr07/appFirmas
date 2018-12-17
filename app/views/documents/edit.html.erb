@@ -5,10 +5,11 @@
     <%= link_to "Regresar", :back %>
 </head>
 <div class="border-form-div-extra">
-	<h2>Compartir documento</h2>
+	<h4>Compartir documento</h4>
 	<%= form_with model: @document, local: true do |form| %>
-	<h5><%= @document.nombre %></h5>
-	<input type="email" id="email" class="form control validate" required placeholder="Correo electrónico">
+	<h6><%= @document.nombre %></h6>
+	<p>Ingresa el correo del colaborador:</p>
+	<input type="email" id="email" class="form-control validate" required placeholder="Correo electrónico">
 	<br><br>
 	<button type="button" id="addEmail" class="btn btn-primary">Agregar usuario</button>
 	<br><br>

@@ -31,7 +31,50 @@
 			</div>
 		</div>
 	</div>
-</div>
+
+	<div class="modal fade" id="agregarColaborador" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h5 class="modal-title" id="tituloModal">Descripción</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="md-form mb-5">
+						<% document_user(@document.id) -%>
+						<% if @users.size > 1 %>
+							<div>
+								<%= form_for @document, url: document_user_upload_path do |f| %>
+									<div class="field">
+										<%= f.label "Profesores:" %>
+										<% @users.each do |user| %>
+											<% if user.id != current_user.id %>
+												<div class="field">
+                              						<%= check_box_tag "users[]", user.id %> <%= user.nombre %>
+                            					</div>
+											<% end %>
+										<% end %>
+									</div>
+									<%= hidden_field_tag(:documentid, @document.id) %>
+                      				<%= f.submit 'Compartir', id: "boton-compartir", class: "btn btn-default"%>
+								<%end %>
+							</div>
+						<% else %>
+						<div class="field">
+                    		<label>Ya compartiste el documento con todos los usuarios registrados.</label>
+                  		</div>
+						<% end %>
+    				</div>
+				</div>
+				<div class="modal-footer">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 <div class="border-form-div-extra">
 	<h2>Detalles</h2>
 	<p>
@@ -48,8 +91,10 @@
 	<%= link_to 'Abrir documento', @document.file %>
 </br><br>
 <%= link_to 'Descargar', @document.file, download: '' %>
-</br><br>
-<%= link_to_if(@document = current_user.documents.find(@document.id), "Compartir documento", { action: "edit"})%>
+</br>
+	<br>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarColaborador">Compartir documento</button>
+<%= link_to_if((@document.user_id = current_user.id), "Compartir documento", { action: "edit"})%>
 </div>
 <div class="embed-responsive embed-responsive-16by9">
 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>

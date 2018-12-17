@@ -1,0 +1,54 @@
+<nav id="sidebar">
+		<div class="sidebar-header">
+			<h3>¿Qué puedo hacer?</h3>
+		</div>
+		<ul class="list-unstyled components">
+			<li class="active">
+				<%= link_to('Inicio', documents_path) %>
+			</li>
+			<li>
+				<%= link_to('Documentos compartidos', documents_shared_path) %>
+			</li>
+			<% if current_user.try(:admin?) %>
+			<li>
+				<%= link_to('Administrar página', rails_admin_path) %>
+			</li>
+			<% end %>
+			<% if current_user.try(:coordinador?) %>
+			<li>
+				<%= link_to 'Subir documento', new_document_path %>
+			</li>
+			<% end %>
+			<li>
+				<a href="#">Firmar documento</a>
+			</li>
+			<li>
+				<%= link_to(current_user.nombre, edit_user_registration_path) %>
+			</li>
+		</ul>
+	</nav>
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fas fa-aling-left"></i>
+						<span>Menú</span>
+					</button>
+				</div>
+				<div class="col-4">
+					<a class="btn btn-danger" role="button" href=<%=destroy_user_session_path %>> Cerrar sesión
+					</a>
+				</div>
+			</div>
+        <br/>
+        <script type="text/javascript">
+		
+		$(document).ready(function () {
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+			});
+		});
+	</script>
+        </div>
+        

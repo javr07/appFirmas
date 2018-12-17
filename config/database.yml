@@ -11,7 +11,7 @@ default: &default
   encoding: utf8
   database: firmasApp
   username: root
-  password: jose95
+  password: hola
 development:
   <<: *default
   database: firmasApp
