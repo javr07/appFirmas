@@ -10,8 +10,8 @@ default: &default
   timeout: 5000
   encoding: utf8
   database: firmasApp
-  username: root
-  password: hola
+  username: firmasAdmin 
+  password: firmasAdminPass
 development:
   <<: *default
   database: firmasApp
