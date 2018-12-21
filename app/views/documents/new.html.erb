@@ -1,6 +1,16 @@
-<div class="jumbotron bg-primary text-center">
+<div class="jumbotron bg-info text-center">
   <h1><font color="white">FirmAndando</font></h1>
 </div>
+
+<% @document.errors.full_messages.each do |msg| %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <p><%= msg %></p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button> 
+      </div>
+<% end %>
+
 <div class="border-form-div-extra">
   <h2>Subir documento</h2>
   <br />
@@ -9,7 +19,7 @@
     <%= form.label :Nombre %><br>
     <%= form.text_field :nombre, :class=>'form-control'%>
   </p>
-  <p>
+  <p> 
     <%= form.label :"Archivo (PDF)" %><br>
     <%= form.file_field :file, accept: 'application/pdf' %>
   </p>

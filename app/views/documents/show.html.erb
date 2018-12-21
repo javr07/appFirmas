@@ -5,7 +5,7 @@
 	<%= link_to "Regresar", :back %>
 </head>
 <body>
-	<div class="modal fade" id="infoDescripcion" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+	<div class="modal fade" id="editarDocumento" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header text-center">
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade" id="agregarColaborador" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+	<div class="modal fade" id="compartirDocumento" tabindex="-1" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header text-center">
@@ -80,25 +80,40 @@
 	<p>
 		<strong>Nombre:</strong>
 		<%= @document.nombre %>
-	</p><br>
+	</p>
 	<p>
 		<strong>Descripción:</strong>
 		<%= @document.descripcion %>
 	</p>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#infoDescripcion">Editar</button>
-	<br><br>
+
 	<h5>Opciones</h5><br>
 	<%= link_to 'Abrir documento', @document.file %>
-</br><br>
-<%= link_to 'Descargar', @document.file, download: '' %>
-</br>
-	<br>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarColaborador">Compartir documento</button>
-<%= link_to_if((@document.user_id = current_user.id), "Compartir documento", { action: "edit"})%>
+	</br><br>
+	<%= link_to 'Descargar', @document.file, download: '' %>
+	<% unless @document.user_id != current_user.id %>
+		<br><br>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editarDocumento">Editar</button>
+
+	<% end %>
+
+	<% if @document.user_id != current_user.id && !@document.signed %>
+		<br><br>
+		<%= link_to('Firmar documento', documents_sign_path(id: @document.id))%>
+	<% end %>
+
+	<% if @document.signed %>
+		<br><br>
+		<strong>Documento firmado</strong>
+	<% end %>
+
+	<% if @document.user_id == current_user.id && current_user.coordinador %>
+		<br><br>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compartirDocumento">Compartir documento</button>
+	<% end %>
 </div>
+
 <div class="embed-responsive embed-responsive-16by9">
 	<iframe class="embed-responsive-item" src=<%= url_for(@document.file) %> allowfullscreen></iframe>
 </div>
+
 </body>
-
-

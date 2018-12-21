@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :collaborators
   has_many :documents, through: :collaborators
   has_one_attached :image
+  has_one :signature
 end

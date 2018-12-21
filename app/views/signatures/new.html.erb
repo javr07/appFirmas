@@ -2,5 +2,20 @@
   <h1><font color="white">FirmAndando</font></h1>
 </div>
 <div class="border-form-div-extra">
-    <h2>Subir documento</h2>
+    <h2 class="text-center">Generar firmas</h2>
+    <%= form_for @signature do |f| %>
+      <div class="field">
+        <%= f.label :password, value: "Ingresa la contraseña con la que se protegerán tus claves." %>
+        <%= f.password_field :password, placeholder: "Contraseña", :required => true, :class=>'form-control' %>
+      </div>
+
+      <div class="actions">
+      </br>
+      <%= f.submit "Generar y descargar claves", :class=>'btn btn-primary' %>
+      </div>
+    <% end %>
+    <p>
+    </br>
+    <%= link_to "Regresar", :back %>
+  </p>
 </div>

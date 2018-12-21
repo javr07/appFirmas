@@ -8,6 +8,15 @@ RailsAdmin.config do |config|
    end
    config.current_user_method(&:current_user)
 
+   RailsAdmin.config do |config|
+  ActiveRecord::Base.descendants.each do |imodel|
+    config.model "#{imodel.name}" do
+      list do
+        exclude_fields :created_at, :updated_at
+      end
+    end
+  end
+end
   ## == Cancan ==
   # config.authorize_with :cancan
 

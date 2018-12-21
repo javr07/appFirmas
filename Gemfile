@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'active_storage_validations'
+gem 'origami'
+gem 'openssl'
+gem 'prawn', '~> 2.1'
+gem 'combine_pdf', '~> 1.0', '>= 1.0.15'
 gem 'mysql2'
 gem 'rake', '~> 12.3', '>= 12.3.2'
 gem 'yaml_db'

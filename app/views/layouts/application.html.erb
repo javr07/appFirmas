@@ -10,14 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
-    <% unless flash.empty? %>
-    <script type="text/javascript">
-          <% flash.each do |f| %>
-        <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-         toastr['<%= type %>']('<%= f[1] %>');
-     <% end %>
-     </script>
+    <% if notice %>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <p><%= notice %></p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button> 
+      </div>
     <% end %>
+    <% if alert %>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <p><%= alert %></p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>  
+
+    <%= yield %>
   </body>
 </html>

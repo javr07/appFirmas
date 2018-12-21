@@ -1,0 +1,29 @@
+<div class="jumbotron bg-info text-center">
+  <h1><font color="white">FirmAndando</font></h1>
+</div>
+<div class="border-form-div-extra">
+    <h5 class="text-center">Firmar documento</h5>
+    <%= form_for @document, url: documents_verifySignature_path do |f| %>
+
+        <div class="field">
+        <br />
+            <%= f.label :value, value: "Sube el archivo con tu llave primaria" %><br />
+            <%= f.file_field :privateKey, accept:'.pem',:required => true, :class=>'form-control-file' %>
+        </div>
+        <br />
+
+        <div class="field">
+            <%= f.label :value, value: "Introduce tu contraseña" %>
+            <%= f.password_field :password, placeholder: "Contraseña", :required => true, :class=>'form-control' %>
+        </div>
+        <br />
+        <%= hidden_field_tag(:documentid, @document.id) %>
+        <div class="actions">
+        </br>
+            <%= f.submit "Firmar documento", :class=>'btn btn-primary' %>
+        </div>
+    <% end %>
+    </br>
+    <%= link_to "Regresar", :back %>
+  
+</div>

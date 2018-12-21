@@ -1,0 +1,2 @@
+class DocumentHashController < ApplicationController
+end

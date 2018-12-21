@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class SignaturesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "redirect after sign" do 
+    post "/documents/sign",
+    params: { singature: { documentid: 1 } }
+    assert_response :redirect
+    follow_redirect!
+  end
 end

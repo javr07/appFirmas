@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_064316) do
+ActiveRecord::Schema.define(version: 2018_12_19_160823) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -50,12 +50,20 @@ ActiveRecord::Schema.define(version: 2018_12_16_064316) do
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
 
+  create_table "document_hashes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "document_id"
+    t.index ["document_id"], name: "index_document_hashes_on_document_id"
+  end
+
   create_table "documents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "descripcion"
     t.bigint "user_id"
+    t.boolean "signed", default: false
     t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
@@ -75,6 +83,8 @@ ActiveRecord::Schema.define(version: 2018_12_16_064316) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "firmasGeneradas"
+    t.text "publicKey"
     t.index ["document_id"], name: "index_signatures_on_document_id"
     t.index ["user_id"], name: "index_signatures_on_user_id"
   end
@@ -93,11 +103,13 @@ ActiveRecord::Schema.define(version: 2018_12_16_064316) do
     t.boolean "admin", default: false
     t.string "nombre"
     t.boolean "coordinador", default: false
+    t.boolean "generatedKeys", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "document_hashes", "documents"
   add_foreign_key "documents", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
