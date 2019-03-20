@@ -13,7 +13,7 @@ gem 'rake', '~> 12.3', '>= 12.3.2'
 gem 'yaml_db'
 gem 'toastr-rails'
 gem 'rails-i18n'
-gem 'bootstrap'
+gem 'bootstrap', ">= 4.3.1"
 gem 'jquery-rails'
 gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
